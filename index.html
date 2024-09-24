@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .head{
+        background-color: rgb(129, 135, 192);
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .logo{
+        margin-top: 3px;
+    }
+    .loca{
+        height: 30px;width: 90px;
+        background-color: rgb(199, 199, 199);
+        margin-top: 28px;border-radius: 5px;border: none;display: flex;justify-content:flex-start;
+    }
+    .loc{
+        border: none;
+        background-color: rgb(199, 199, 199);margin-right: 15px;display: flex;height: fit-content;width: 20px;
+        border-radius: 50%;justify-content: center;margin-top: 5px;
+    }
+    .loc:hover{
+        height: 23px;
+        background-color: whitesmoke;
+    }
+    .search{
+        width:60%;border: 1px solid rgb(199, 199, 199);height: 40px;width: 320px;border-radius: 10px;
+        display: flex;
+        background-color: rgb(199, 199, 199);margin-top: 23px;
+    }
+    .lens{
+        border: none;
+        margin-top: 7px;margin-left: 15px;background-color: rgb(199, 199, 199);height: fit-content;
+        border-radius: 5px;
+    }
+    .lens:hover{
+        height: 28px;
+        background-color:whitesmoke ;
+    }
+    .about{
+        font-size: 20px;display: flex;margin-top: 10px;
+    }
+    .about:hover{
+       color: whitesmoke;
+    }
+    .cart{
+        margin-top: 28px;display: flex;
+    }
+    .cart:hover{
+        color: whitesmoke;
+    }
+    .carttext{
+        margin-top: 10px;font-size: 20px;margin-left: -75px;
+    }
+    .carttext:hover{
+        color: whitesmoke;
+    }
+    .signin{
+        width: 80px;margin-top: 10px;display: flex;
+    }
+    .sign{
+        margin-top: 28px;
+    }
+    .sign:hover{
+        color: whitesmoke;
+    }
+    .imgs{
+        margin-top: 10px;
+        margin-left: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        object-fit: cover;
+    }
+    .imgl{
+        margin-left: 20px;
+        width: 160px;
+    }
+    .img1{
+        height: 103.68px;width: 80.64px;
+    }
+    .txtim{
+        margin-top: 2px;
+        font-weight: bolder;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .txtim:hover{
+        color: rgb(126, 17, 36);
+    }
+    .addimg{
+        width:100%;
+        height: 350px;
+        object-fit: contain;
+    }
+    .rowf{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .row1{
+        display: flex;
+        font-size: 20px;
+        font-weight: bolder;
+        z-index: 1;
+    }
+    .cattxt{
+        margin-top: -2px;
+        font-size: medium;
+        z-index: 1;
+    }
+    .cattxt:hover{
+        color: rgb(87, 85, 85);
+    }
+    .catimg{
+        height: 103.68px;width: 80.64px;
+    }
+    .mySlides {
+        display: none;
+    }
+    .imgsl {
+        width: 100%;
+        height: 450px;
+        vertical-align: middle;
+        object-fit: contain;
+    }
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        object-fit: cover;
+    }
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.aplica{
+    margin-top: 10px;margin-left: 30px;
+}
+</style>
+<body>
+    <div class="head">
+        <div class="logo">
+            <p style="width: 60%; font-weight: bolder;margin-left: 40%;font-size: 20px;">ABC 
+                <i class="fa fa-copyright" style="font-size:20px;color: rgb(217, 255, 0);"></i> Shopping</p>
+            
+        </div>
+        <div class="search">
+            <input style="outline: none;border-radius: 5px; font-weight: bold;font-size: 18px;border: none;margin-left: 20px;background-color: rgb(199, 199, 199);"
+             type="text" placeholder="Search Your Needs">
+             <button class="lens">
+             <i class="fa fa-search" style="font-size:24px;"></i></button>
+        </div>
+        <div class="loca">
+            <input style="border: none; width: 60px;height: 25px;border-radius: 5px;
+            font-size: 11px;background-color: rgb(199, 199, 199);outline: none;margin-left: 3px;" type="text" placeholder="Locate Me">
+        <button class="loc">
+            <i class="fa fa-map-marker" style="font-size:20px;"></i></button>
+        </div>
+        <div class="about">
+            <p>About Us</p>
+        </div>
+        <div class="cart">
+            <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+        </div>
+        <div class="carttext">
+            <p>Cart</p>
+        </div>
+        <div class="signin">
+            <p>Login Or Sign up</p>
+            <div class="sign">
+                <i class="fa fa-sign-in" style="font-size:24px"></i>
+            </div>
+        </div>       
+    </div>
+    <div class="imgs">
+        <div class="imgl">
+            <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZfnxe1O2EWYldkWSHyoljbQYG9UUC_p7VQ&usqp=CAU">
+            <p class="txtim">Discounts</p>
+        </div>
+        <div class="imgl">
+            <img class="img1" src="https://www.pngkit.com/png/detail/47-477296_clip-freeuse-library-grocery-products-svg-png-icon.png">
+            <p class="txtim">Grocery</p>
+        </div>
+        <div class="imgl">
+            <img class="img1" src="https://cdn-icons-png.flaticon.com/512/5333/5333434.png">
+            <p class="txtim">Travel</p>
+        </div>
+        <div class="imgl">
+            <img class="img1" src="https://cdn-icons-png.flaticon.com/512/3481/3481069.png">
+            <p class="txtim">Top Deals</p>
+        </div>
+        <div class="imgl">
+            <img class="img1" src="https://static.vecteezy.com/system/resources/previews/013/362/761/non_2x/cardboard-boxes-brown-free-png.png">
+            <p class="txtim">Renewed</p>
+        </div>
+        <div class="imgl">
+            <img class="img1" src="https://www.freepnglogos.com/uploads/games-png/games-controller-game-icon-17.png">
+            <p class="txtim">Game Zone</p>
+        </div>     
+    </div>
+    <div>
+        <img class="addimg" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/electronics-sale-design-template-6b72cebe2269fa223c789f0728c99e9b_screen.jpg?ts=1635771976">
+    </div>
+    <div class="rowf">
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://www.freeiconspng.com/thumbs/fast-food-png/fast-food-png-most-popular-fast-food-snacks-in-your-area-and-most--3.png">
+            <p class="cattxt">Food</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://www.solgroup.net/wp-content/uploads/2020/12/SOL-13.png">
+            <p class="cattxt">Mobiles</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://cdn-icons-png.flaticon.com/512/6165/6165574.png">
+            <p class="cattxt">Fashion</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://www.transparentpng.com/thumb/laptop/YmlelI-laptops-png-images-notebook-png-image-laptop.png">
+            <p class="cattxt">Electronics</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://www.freeiconspng.com/uploads/pure-dining-table-and-mistra-side-chairs-png-10.png">
+            <p class="cattxt">Furnitures</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://media.neappliances.com/wysiwyg/washing_machine_and_fridge_2.png">
+            <p class="cattxt">Appliances</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://www.pngall.com/wp-content/uploads/8/Airplane-Flight-PNG-High-Quality-Image.png">
+            <p class="cattxt">Travel</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://www.pngall.com/wp-content/uploads/4/Grocery-PNG-Free-Download.png">
+            <p class="cattxt">Grocery</p>
+        </div>
+        </div>
+        <div class="row1">
+            <div>
+            <img class="catimg" src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1605259288/Croma%20Assets/Gaming/Electronics%20%28Toys%29/Images/8993893810206.png">
+            <p class="cattxt">Toys & More</p>
+        </div>
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img class="imgsl" src="https://images.freekaamaal.com/store_desc_images/1537253332.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="imgsl" src="https://sslimages.shoppersstop.com/sys-master/root/hc5/h59/30417000562718/EOSS-Main-Banner-Web_170723m_menspage.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="imgsl" src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/asus-rog-laptop2_24899103-1217-4e1f-b885-a6792787f87c.png?v=1632021338" style="width:100%">
+        </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000);
+        }
+        </script>
+    <div style="display: flex;">
+        <img class="aplica" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/play_ip0jfp" height="54">
+        <img class="aplica" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/iOS_ajgrty" height="54">
+</div>
+</body>
+</html>
